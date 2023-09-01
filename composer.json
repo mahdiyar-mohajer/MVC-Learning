@@ -1,0 +1,17 @@
+{
+    "name": "mahdiyarmohajer/mvc-lerning",
+    "autoload": {
+        "psr-4": {
+            "MvcLearning\\": "./"
+        }
+    },
+    "authors": [
+        {
+            "name": "mahdiyar-mohajer",
+            "email": "mahdiyar.1987@yahoo.com"
+        }
+    ],
+    "require": {
+        "illuminate/database": "^10.21"
+    }
+}
