@@ -2,10 +2,13 @@
 
 namespace MvcLearning\app\core;
 
+use MvcLearning\app\core\Controller;
+
 class Application
 {
     private Router $router;
     private Request $request;
+    private Controller $controller;
     private Response $response;
     private static string $ROOT_DIR;
     private static $instance;
@@ -29,6 +32,7 @@ class Application
         self::$ROOT_DIR = $rootPath;
         $this->request = new Request();
         $this->response = new Response();
+        $this->controller = new Controller();
         $this->router = new Router($this->request, $this->response);
     }
     public static function getInstance() {
@@ -58,5 +62,16 @@ class Application
     {
         return $this->response;
     }
+
+    public function getController(): \MvcLearning\app\core\Controller
+    {
+        return $this->controller;
+    }
+
+    public function setController(\MvcLearning\app\core\Controller $controller): void
+    {
+        $this->controller = $controller;
+    }
+
 
 }

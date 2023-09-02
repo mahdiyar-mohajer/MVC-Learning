@@ -40,8 +40,8 @@ class Router
             return $this->renderView($callback);
         }
         if (is_array($callback)){
-            Application::getApp()->setController(new $callback[0]);
-            $callback[0] = Application::getApp()->getController();
+            Application::getInstance()->setController(new $callback[0]);
+            $callback[0] = Application::getInstance()->getController();
         }
         return call_user_func($callback);
     }
@@ -71,9 +71,9 @@ class Router
     }
     public function layoutContent(): string
     {
-//        $layout = Application::getApp()->getController()->getLayout();
+        $layout = Application::getInstance()->getController()->getLayout();
         ob_start();
-        include_once Application::getROOTDIR()."/../app/view/layout/auth.php";
+        include_once Application::getROOTDIR()."/../app/view/layout/$layout.php";
         return ob_get_clean();
     }
     public function renderOnlyView($view, $params=[] ) : string
