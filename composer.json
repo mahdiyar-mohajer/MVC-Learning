@@ -3,7 +3,10 @@
     "autoload": {
         "psr-4": {
             "MvcLearning\\": "./"
-        }
+        },
+      "files": [
+        "helper/helper.php"
+      ]
     },
     "authors": [
         {
@@ -12,6 +15,11 @@
         }
     ],
     "require": {
-        "illuminate/database": "^10.21"
+        "illuminate/database": "^10.22",
+      "ext-pdo": "*",
+        "illuminate/translation": "^10.21",
+        "illuminate/validation": "^10.21",
+        "illuminate/filesystem": "^10.21",
+        "larapack/dd": "^1.1"
     }
 }

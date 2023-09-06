@@ -27,7 +27,7 @@
 
     <nav class="navbar navbar-expand-lg bg-light fixed-top shadow-lg">
     <div class="container">
-        <a class="navbar-brand mx-auto d-lg-none" href="index.html">
+        <a class="navbar-brand mx-auto d-lg-none" href="home">
             Mahdiyar Care
             <strong class="d-block">Health Specialist</strong>
         </a>
@@ -50,22 +50,11 @@
                     <a class="nav-link" href="#timeline">Timeline</a>
                 </li>
 
-                <a class="navbar-brand d-none d-lg-block" href="index.html">
-                    Medic Care
+                <a class="navbar-brand d-none d-lg-block" href="">
+                    Mahdiyar Care
                     <strong class="d-block">Health Specialist</strong>
                 </a>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#reviews">Testimonials</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#booking">Booking</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
-                </li>
+                {{loginRegister}}
             </ul>
         </div>
 

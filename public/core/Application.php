@@ -1,8 +1,6 @@
 <?php
 
-namespace MvcLearning\app\core;
-
-use MvcLearning\app\core\Controller;
+namespace MvcLearning\public\core;
 
 class Application
 {
@@ -63,12 +61,12 @@ class Application
         return $this->response;
     }
 
-    public function getController(): \MvcLearning\app\core\Controller
+    public function getController(): \MvcLearning\public\core\Controller
     {
         return $this->controller;
     }
 
-    public function setController(\MvcLearning\app\core\Controller $controller): void
+    public function setController(\MvcLearning\public\core\Controller $controller): void
     {
         $this->controller = $controller;
     }

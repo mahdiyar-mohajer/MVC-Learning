@@ -1,6 +1,6 @@
 <?php
 
-namespace MvcLearning\app\core;
+namespace MvcLearning\public\core;
 
 class Router
 {
@@ -50,22 +50,11 @@ class Router
     {
         $layoutContent = $this->layoutContent();
         $viewContent = $this->renderOnlyView($view, $params);
-//        $layoutContent = str_replace('{{title}}',$view,$layoutContent);
-//        if (isset($_SESSION['role'])){
-//            if ($_SESSION['role'] == 'doctor'){
-//                $layoutContent = str_replace('{{authentication}}',$this->renderOnlyView('doctorPanel'),$layoutContent);
-//            }
-//            if ($_SESSION['role'] == 'manager'){
-//                $layoutContent = str_replace('{{authentication}}',$this->renderOnlyView('managerPanel'),$layoutContent);
-//            }
-//            else{
-//                $layoutContent = str_replace('{{authentication}}',$this->renderOnlyView('userPanel'),$layoutContent);
-//            }
-//
-//        }else{
-//            $layoutContent = str_replace('{{authentication}}',$this->renderOnlyView('authentication'),$layoutContent);
-//        }
-//        $layoutContent = str_replace("{".$view."}",' text-orange-600',$layoutContent);
+        if(isset($_SESSION['user_name'])){
+            $layoutContent = str_replace('{{'.'loginRegister'.'}}',$this->renderOnlyView("profile"),$layoutContent);
+        }else{
+            $layoutContent = str_replace('{{'.'loginRegister'.'}}',$this->renderOnlyView("loginRegister"),$layoutContent);
+        }
         $layoutContent = str_replace('{{title}}',$view,$layoutContent);
         return str_replace('{{content}}',$viewContent,$layoutContent);
     }

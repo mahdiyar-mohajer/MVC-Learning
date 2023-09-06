@@ -2,7 +2,7 @@
 
 namespace MvcLearning\app\controller;
 
-use MvcLearning\app\core\Controller;
+use MvcLearning\public\core\Controller;
 
 class SiteController extends Controller
 {
@@ -10,5 +10,9 @@ class SiteController extends Controller
     {
         return $this->render('home');
     }
-
+    public function doctorProfile()
+    {
+        $this->setLayout('auth');
+        return $this->render('doctorProfile');
+    }
 }

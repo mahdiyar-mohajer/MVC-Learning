@@ -1,8 +1,7 @@
 <?php
 
-namespace MvcLearning\app\core;
+namespace MvcLearning\public\core;
 
-use MvcLearning\app\core\Application;
 class Controller
 {
     private string $layout = 'main';

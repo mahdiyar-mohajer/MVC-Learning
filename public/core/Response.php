@@ -1,6 +1,6 @@
 <?php
 
-namespace MvcLearning\app\core;
+namespace MvcLearning\public\core;
 
 class Response
 {
